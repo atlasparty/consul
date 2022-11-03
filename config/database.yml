@@ -1,0 +1,26 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  host: ENV["DATABASE_HOST"]
+  port: ENV["DATABASE_PORT"]
+  database: ENV["DATABASE_NAME"]
+  username: ENV["DATABASE_USERNAME"]
+  password: ENV["DATABASE_PASSWORD"]
+  pool: 5
+
+development:
+  <<: *default
+
+# The staging, preproduction and production dbs are only needed
+# for running rake assets:precompile locally before deploying
+staging:
+  <<: *default
+
+preproduction:
+  <<: *default
+
+production:
+  <<: *default
+
+test:
+  <<: *default
