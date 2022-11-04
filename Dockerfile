@@ -3,12 +3,15 @@ FROM ruby:2.7.6-buster
 ENV DEBIAN_FRONTEND noninteractive
 
 # Set docker args
+ARG RAILS_ENV
+ARG RAILS_SERVE_STATIC_FILES
 ARG SECRET_KEY_BASE
 ARG DATABASE_HOST
 ARG DATABASE_PORT
 ARG DATABASE_NAME
 ARG DATABASE_USERNAME
 ARG DATABASE_PASSWORD
+ARG FORCE_SSL
 
 # Install essential Linux packages
 RUN apt-get update -qq \
@@ -29,7 +32,7 @@ RUN apt-get update -qq \
     unzip
 
 # Install Chromium for E2E integration tests
-RUN apt-get update -qq && apt-get install -y chromium
+# RUN apt-get update -qq && apt-get install -y chromium
 
 # Files created inside the container repect the ownership
 RUN adduser --shell /bin/bash --disabled-password --gecos "" consul \
@@ -55,6 +58,9 @@ RUN bundle install
 
 # Copy the Rails application into place
 COPY . .
+
+# precompile assets
+RUN rake assets:precompile
 
 # Set consul user as dir owner
 RUN chown -R consul:consul $RAILS_ROOT
