@@ -2,6 +2,14 @@ FROM ruby:2.7.6-buster
 
 ENV DEBIAN_FRONTEND noninteractive
 
+# Set docker args
+ARG SECRET_KEY_BASE
+ARG DATABASE_HOST
+ARG DATABASE_PORT
+ARG DATABASE_NAME
+ARG DATABASE_USERNAME
+ARG DATABASE_PASSWORD
+
 # Install essential Linux packages
 RUN apt-get update -qq \
  && apt-get install -y \
@@ -47,6 +55,12 @@ RUN bundle install
 
 # Copy the Rails application into place
 COPY . .
+
+# Set consul user as dir owner
+RUN chown -R consul:consul $RAILS_ROOT
+
+# Expose the port rails runs on
+EXPOSE 8080
 
 ENTRYPOINT ["./docker-entrypoint.sh"]
 # Define the script we want run once the container boots

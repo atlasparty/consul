@@ -7,7 +7,9 @@ services:
     # see https://hub.docker.com/_/postgres/
     image: postgres:9.6.21
     environment:
-      - POSTGRES_PASSWORD=$POSTGRES_PASSWORD
+      - POSTGRES_DB=${POSTGRES_DB}
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
     # persist the database between containers by storing it in a volume
     volumes:
       - db_data:/var/lib/postgresql/data
@@ -34,7 +36,13 @@ services:
       - .:/var/www/consul
       - bundle:/usr/local/bundle
     environment:
-      - POSTGRES_PASSWORD=$POSTGRES_PASSWORD
+      - RAILS_ENV=${RAILS_ENV}
+      - SECRET_KEY_BASE=${SECRET_KEY_BASE}
+      - DATABASE_HOST=database
+      - DATABASE_PORT=5432
+      - DATABASE_NAME=${POSTGRES_DB}
+      - DATABASE_USERNAME=${POSTGRES_USER}
+      - DATABASE_PASSWORD=${POSTGRES_PASSWORD}
 volumes:
   db_data: {}
   bundle: {}
