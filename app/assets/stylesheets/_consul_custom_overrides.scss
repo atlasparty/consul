@@ -11,6 +11,8 @@
 // The variables you can override are defined in the
 // `_settings.scss` and `_consul_settings.scss` files.
 
+// override _consul_settings.scss
+
 $black: #222222 !default;
 $white: #fbfbfb !default;
 
@@ -29,3 +31,13 @@ $border:            #b8b8b8 !default;
 $info-bg:           #ffc2e3 !default;
 $info-border:       #ff70bf !default;
 $color-info:        #e5007e !default;
+
+// override _settings.scss
+
+$foundation-palette: (
+  primary: #e5007e,
+  secondary: #f8b133,
+  success: #3adb76,
+  warning: #ffae00,
+  alert: #cc4b37,
+) !default;
