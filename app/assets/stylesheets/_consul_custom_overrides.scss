@@ -10,3 +10,18 @@
 //
 // The variables you can override are defined in the
 // `_settings.scss` and `_consul_settings.scss` files.
+
+$black: #222222 !default;
+$white: #fbfbfb !default;
+
+$body-font-family: "Poppins", sans-serif !important !default;
+
+$brand:             #e5007e !default;
+$brand-secondary:   #f8b133 !default;
+$dark:              $black !default;
+
+$text:              $black !default;
+$text-medium:       #5C5C5C !default;
+$text-light:        #b8b8b8 !default;
+
+$border:            #b8b8b8 !default;

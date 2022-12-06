@@ -125,3 +125,34 @@
   font-weight: 500;
   font-style: normal;
 }
+
+// 04. Poppins
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+@font-face {
+  font-family: "Poppins";
+  src: font-url("poppins/poppins-light.ttf") format("truetype");
+  font-weight: lighter;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: font-url("poppins/poppins-regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: font-url("poppins/poppins-bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: font-url("poppins/poppins-medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
