@@ -208,6 +208,7 @@ en:
       consul_url: https://github.com/consul/consul
       copyright: CONSUL, %{year}
       description: This portal uses the %{consul} which is %{open_source}.
+      faq: Frequently asked questions
       open_source: open-source software
       open_source_url: http://www.gnu.org/licenses/agpl-3.0.html
       participation_text: Decide how to shape the city you want to live in.
