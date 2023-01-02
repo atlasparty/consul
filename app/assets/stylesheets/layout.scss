@@ -612,7 +612,7 @@ body > header,
     }
 
     .button {
-      background: none;
+      background: none !important;
       text-align: left;
 
       @include breakpoint(medium) {
