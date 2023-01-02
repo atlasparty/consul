@@ -998,9 +998,9 @@ footer {
 }
 
 .auth-image {
-  background: $brand image-url("auth_bg.png");
+  background: $black image-url("auth_bg.png");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   color: $white;
 
   @include breakpoint(medium) {
