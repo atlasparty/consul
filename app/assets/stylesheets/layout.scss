@@ -669,7 +669,7 @@ body > header,
       width: auto;
 
       @include breakpoint(medium up) {
-        height: auto;
+        height: 100px;
       }
     }
   }
