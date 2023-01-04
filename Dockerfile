@@ -14,6 +14,11 @@ ARG DATABASE_USERNAME
 ARG DATABASE_PASSWORD
 ARG FORCE_SSL
 
+ARG SMTP_HOST
+ARG SMTP_PORT
+ARG SMTP_EMAIL_USERNAME
+ARG SMTP_EMAIL_PASSWORD
+
 # Install essential Linux packages
 RUN apt-get update -qq \
  && apt-get install -y \
