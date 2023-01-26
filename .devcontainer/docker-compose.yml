@@ -16,6 +16,7 @@ services:
 
   # service configuration for our dockerized Rails app
   app:
+    env_file: devcontainer.env
 
     # use the Dockerfile next to this file
     build: .
