@@ -63,7 +63,6 @@ WORKDIR $RAILS_ROOT
 # Use the Gemfiles as Docker cache markers. Always bundle before copying app src.
 # (the src likely changed and we don't want to invalidate Docker's cache too early)
 COPY Gemfile* ./
-RUN ls ./
 RUN bundle install
 
 # Copy the Rails application into place
@@ -74,9 +73,6 @@ RUN rake assets:precompile
 
 # create db
 RUN rake db:create
-RUN rake db:setup
-RUN rake db:dev_seed
-RUN rake db:test:prepare
 
 # Set consul user as dir owner
 RUN chown -R consul:consul $RAILS_ROOT
