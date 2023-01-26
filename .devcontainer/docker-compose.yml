@@ -2,6 +2,7 @@ version: "3"
 services:
   # service configuration for our database
   database:
+    env_file: devcontainer.env
 
     # use the preferred version of the official Postgres image
     # see https://hub.docker.com/_/postgres/
@@ -19,7 +20,9 @@ services:
     env_file: devcontainer.env
 
     # use the Dockerfile next to this file
-    build: .
+    build:
+      context: ..
+      dockerfile: .devcontainer/Dockerfile
 
     # rely on the RAILS_ENV value of the host machine
     # environment:
