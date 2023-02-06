@@ -1,5 +1,0 @@
-{
-    "name": "Consul",
-    "dockerComposeFile": "docker-compose.yml",
-    "service": "app"
-}
