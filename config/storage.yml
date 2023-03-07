@@ -1,10 +1,10 @@
-local:
-  service: Disk
-  root: <%= Rails.root.join("storage") %>
+# local:
+#   service: Disk
+#   root: <%= Rails.root.join("storage") %>
 
-test:
-  service: Disk
-  root: <%= Rails.root.join("tmp/storage") %>
+# test:
+#   service: Disk
+#   root: <%= Rails.root.join("tmp/storage") %>
 
 # s3:
 #   service: S3
@@ -12,6 +12,19 @@ test:
 #   secret_access_key: <%= Rails.application.secrets.dig(:s3, :secret_access_key) %>
 #   region: <%= Rails.application.secrets.dig(:s3, :region) %>
 #   bucket: <%= Rails.application.secrets.dig(:s3, :bucket) %>
+
+s3: # change to production?
+  service: S3
+  endpoint: <%= Rails.application.secrets.dig(:s3, :endpoint) %>
+  access_key_id: <%= Rails.application.secrets.dig(:s3, :access_key_id) %>
+  secret_access_key: <%= Rails.application.secrets.dig(:s3, :secret_access_key) %>
+
+# s3:
+#   service: S3
+#   access_key_id: <%= ENV["S3_ACCESS_KEY_ID"] %>
+#   secret_access_key: <%= ENV["S3_SECRET_ACCESS_KEY"] %>
+#   region: <%= ENV["S3_REGION"] %>
+#   bucket: <%= ENV["S3_BUCKET"] %>
 
 # Remember not to checkin your GCS keyfile to a repository
 # gcs:
