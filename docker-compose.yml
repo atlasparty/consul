@@ -45,6 +45,8 @@ services:
       - DATABASE_USERNAME=${POSTGRES_USER}
       - DATABASE_PASSWORD=${POSTGRES_PASSWORD}
       - FORCE_SSL=${FORCE_SSL}
+      - STORAGE_ACCESS_KEY=${STORAGE_ACCESS_KEY}
+      - STORAGE_SECRET=${STORAGE_SECRET}
 volumes:
   db_data: {}
   bundle: {}
