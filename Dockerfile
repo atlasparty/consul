@@ -38,7 +38,8 @@ RUN apt-get update -qq \
     postgresql-client \
     shared-mime-info \
     sudo \
-    unzip
+    unzip \
+    ca-certificates
 
 # Install Chromium for E2E integration tests
 # RUN apt-get update -qq && apt-get install -y chromium
