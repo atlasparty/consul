@@ -582,13 +582,13 @@ en:
           banner_title: Header colors
         index:
           create: New process
-          title: Collaborative legislation
+          title: Collaborating Policy-Making
           filters:
             active: Active
             all: All
         new:
           back: Back
-          title: Create new collaborative legislation process
+          title: Create new collaborative policy-making process
           submit_button: Create process
         proposals:
           orders:
@@ -776,7 +776,7 @@ en:
       title_settings: Settings
       title_site_customization: Site content
       title_booths: Voting booths
-      legislation: Collaborative Legislation
+      legislation: Collaborating Policy-Making
       users: Users
       dashboard: Proposals dashboard
       administrator_tasks: Resources requested
