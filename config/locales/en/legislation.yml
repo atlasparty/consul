@@ -63,10 +63,10 @@ en:
         no_past_processes: There aren't past processes
         section_header:
           icon_alt: Collaborative legislation icon
-          title: Collaborating Policy-Making
-          help: Help with Collaborating Policy-Making
+          title: Collaborative Policy-Making
+          help: Help with Collaborative Policy-Making
         section_footer:
-          title: Help with Collaborating Policy-Making
+          title: Help with Collaborative Policy-Making
           description: Participate in the debates and processes prior to the approval of new regulations or strategies. Your opinion will be considered.
       phase_not_open:
         not_open: This phase is not open yet
@@ -102,7 +102,7 @@ en:
         next_question: Next question
         first_question: First question
         share: Share
-        title: Collaborating Policy-Making process
+        title: Collaborative Policy-Making process
       participation:
         phase_not_open: This phase is not open
         organizations: Organisations are not permitted to participate in the debate
@@ -116,7 +116,7 @@ en:
       form:
         tags_label: "Categories"
       not_verified: "For vote proposals %{verify_account}."
-      process_title: Collaborating Policy-Making process
+      process_title: Collaborative Policy-Making process
     summary:
       title: "Summary"
       votes:

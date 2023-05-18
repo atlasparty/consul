@@ -582,7 +582,7 @@ en:
           banner_title: Header colors
         index:
           create: New process
-          title: Collaborating Policy-Making
+          title: Collaborative Policy-Making
           filters:
             active: Active
             all: All
@@ -776,7 +776,7 @@ en:
       title_settings: Settings
       title_site_customization: Site content
       title_booths: Voting booths
-      legislation: Collaborating Policy-Making
+      legislation: Collaborative Policy-Making
       users: Users
       dashboard: Proposals dashboard
       administrator_tasks: Resources requested
